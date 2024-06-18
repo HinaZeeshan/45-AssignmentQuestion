@@ -1,0 +1,83 @@
+// Shrinking Guest 
+// List: You just found out that your new dinner table won’t arrive in time for the dinner, 
+// and you have space for only two guests.
+// • Start with your program from Exercise 16.
+//  Add a new line that prints a message saying that you can invite only two people for dinner.
+
+// • Remove guests from your list one at a time until only two names remain in your list.
+//  Each time you pop a name from your list, 
+// print a message to that person letting them know you’re sorry you can’t invite them to dinner.
+
+// • Print a message to each of the two people still on your list, letting them know they’re still invited.
+
+// • Remove the last two names from your list, so you have an empty list. Print your list to make sure you actually have an empty list at the end of your program.
+
+
+
+let guest : string []= ['tooba','ayan','arbab'];
+
+ 
+// for (let i=0; i<guest.length; i++ ){
+
+//     console.log('Dear'+ guest[i]+  ', \n\n it is pleasure to us you join our party.\n\n Thank you\n\n')
+
+// }
+
+
+let canNot :string = 'tooba';
+
+
+let newGuest : string ="misha";
+;
+ guest[0] = newGuest;
+
+//  for (let i=0; i<guest.length; i++ ){
+
+//     console.log('Dear'+ guest[i]+  ', \n\n it is pleasure to us you join our party.\n\n Thank you\n\n')
+
+// }
+
+
+//console.log(canNot +" "+ 'cannot come to join us');
+
+
+
+//console.log('good news! we found a bigger dinner table,we Think of three more guests to invite to dinner');
+
+// add one person 
+guest.unshift('ashar')
+guest.splice(2,0,'miss Aiza')
+guest.push('hassan')
+
+//6 persons array
+// for (let i=0; i<guest.length; i++ ){
+
+//     console.log('Dear'+ guest[i]+  ', \n\n it is pleasure to us you join our party.\n\n Thank you\n\n')
+
+// }
+// excuse here for invitation cancellation
+//console.log('\nsorry we cannot arrange bog table ,only two people will invited.');
+
+// remove guest here
+while(guest.length > 2 ){
+    let remove_guest = guest.pop();
+   // console.log(`sorry My dear...!${remove_guest} you are not invited for dinner.`);
+}
+// rest  of 2 guest
+
+// for (let i=0; i<guest.length; i++ ){
+
+//     console.log('Dear'+ guest[i]+  ', \n\n you are still invited .\n\n Thank you\n\n')
+// }
+
+//all guest  remove from array
+guest.splice(0,2);
+console.log(guest);
+
+
+//exercise 19- dinner-guest
+//Dinner Guests: Working with one of the programs from Exercises 14 through 18,
+// print a message indicating the number of people you are inviting to dinner.
+
+
+console.log(`total no of guest are: ${guest.length} `)
